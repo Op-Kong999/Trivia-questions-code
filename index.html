@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Blitz - General Knowledge Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="JS/jquery-3.7.1.js"></script>
+    <script src="JS/script.js"></script>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="audio/Marshmello - Alone (Official).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h2>Brain Blitz</h2>
+            <p>Test your general knowledge in 2 minutes!</p>
+            <div class="timer-container">
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="time">02:00</span>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress"></div>
+            </div>
+        </div>
+        
+        <div class="quiz-body" id="quiz-body">
+            <!-- Questions will be loaded here -->
+        </div>
+        
+        <div class="quiz-footer">
+            <button class="btn" id="prev-btn" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+            <button class="btn" id="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+        
+        <div class="result-container" id="result-container">
+            <div class="result-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h2 class="result-title">Quiz Completed!</h2>
+            <p class="result-score">You scored <span id="correct-answers">0</span> out of <span id="total-questions">0</span></p>
+            
+            <div class="score-circle" id="score-circle">
+                <div class="score-inner">
+                    <span class="score-percent" id="score-percent">0%</span>
+                    <span class="score-text">Correct</span>
+                </div>
+            </div>
+            
+            <button class="btn" id="restart-btn"><i class="fas fa-redo"></i> Try Again</button>
+        </div>
+    </div>
+
+  
+</html>
