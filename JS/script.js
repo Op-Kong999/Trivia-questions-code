@@ -187,6 +187,16 @@ $(document).ready(function() {
         }
     }
     
+    document.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('background-music');
+        const button = document.getElementById('play-music');
+    
+        button.addEventListener('click', () => {
+            audio.play();
+            button.style.display = 'none'; // hide button after playing
+        });
+    });
+    
     // Timer function
     function startTimer() {
         updateTimerDisplay();

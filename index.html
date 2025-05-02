@@ -10,14 +10,14 @@
     <script src="JS/script.js"></script>
 </head>
 <body>
-    <audio autoplay loop>
+    <audio id="background-music" autoplay loop>
         <source src="audio/Marshmello - Alone (Official).mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
       
     <div class="quiz-container">
         <div class="quiz-header">
-            <h2>Brain Blitz</h2>
+            <h2>Quick Quiz</h2>
             <p>Test your general knowledge in 2 minutes!</p>
             <div class="timer-container">
                 <div class="timer">
@@ -36,6 +36,7 @@
         
         <div class="quiz-footer">
             <button class="btn" id="prev-btn" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+            <button id="play-music" class="btn play-music-btn">Play Background Music</button>
             <button class="btn" id="next-btn">Next <i class="fas fa-arrow-right"></i></button>
         </div>
         
