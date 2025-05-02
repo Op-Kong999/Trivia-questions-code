@@ -187,16 +187,36 @@ $(document).ready(function() {
         }
     }
     
-    document.addEventListener('DOMContentLoaded', function() {
-        const audio = document.getElementById('background-music');
-        const button = document.getElementById('play-music');
+    const audio = $('#background-music')[0];
+    const button = $('#play-music');
     
-        button.addEventListener('click', () => {
-            audio.play();
-            button.style.display = 'none'; // hide button after playing
+    button.on('click', function() {
+        audio.play().then(() => {
+            button.hide(); // hide button after playing
+        }).catch((error) => {
+            console.error('Audio play failed:', error);
         });
     });
     
+    
+
+    let isPlaying = false;
+
+playMusicBtn.on('click', function() {
+    if (!isPlaying) {
+        audio.play().then(() => {
+            playMusicBtn.text('Pause Background Music');
+            isPlaying = true;
+        }).catch((error) => {
+            console.error('Audio play failed:', error);
+        });
+    } else {
+        audio.pause();
+        playMusicBtn.text('Play Background Music');
+        isPlaying = false;
+    }
+});
+
     // Timer function
     function startTimer() {
         updateTimerDisplay();
