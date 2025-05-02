@@ -200,23 +200,7 @@ $(document).ready(function() {
     
     
 
-    let isPlaying = false;
-
-playMusicBtn.on('click', function() {
-    if (!isPlaying) {
-        audio.play().then(() => {
-            playMusicBtn.text('Pause Background Music');
-            isPlaying = true;
-        }).catch((error) => {
-            console.error('Audio play failed:', error);
-        });
-    } else {
-        audio.pause();
-        playMusicBtn.text('Play Background Music');
-        isPlaying = false;
-    }
-});
-
+    
     // Timer function
     function startTimer() {
         updateTimerDisplay();
